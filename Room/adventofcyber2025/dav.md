@@ -7,6 +7,9 @@
 ## Day 1 — Linux CLI: Shells Bells  
 *A full walkthrough including commands, findings, answers, and captured flags.*
 
+<p align="center">
+  <img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/678ecc92c80aa206339f0f23/room-content/678ecc92c80aa206339f0f23-1762788000826.png" alt="TryHackMe Terminal Screenshot" width="600">
+</p>
 
 
 ## ❄️ 1. Challenge Overview
@@ -22,7 +25,9 @@ A compromised Linux server contains hidden files, suspicious login attempts, and
 **Tools used:**
 `ls`, `cd`, `cat`, `find`, `history`, `grep`, `pwd`
 
-
+<p align="center">
+  <img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/678ecc92c80aa206339f0f23/room-content/678ecc92c80aa206339f0f23-1762788000830.png" alt="TryHackMe Screenshot" width="600">
+</p>
 
 ## 🗂️ 3. Filesystem Exploration
 
