@@ -1,4 +1,4 @@
-![Uploading image.png…]()
+https://tryhackme-images.s3.amazonaws.com/user-uploads/6228f0d4ca8e57005149c3e3/room-content/6228f0d4ca8e57005149c3e3-1763378686706.png
 
 # 🛡️ TryHackMe – Advent of Cyber 2025  
 ## Day 1 — Linux CLI: Shells Bells  
