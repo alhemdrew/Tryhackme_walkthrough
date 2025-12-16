@@ -4,7 +4,7 @@
 
 # 🛡️ TryHackMe – Advent of Cyber 2025
 
-## Day 02 — Phishing: Merry Clickmas
+## Day 02 — Phishing: Merry Clickmas ✅
 
 *Hands-on phishing simulation using the Social-Engineer Toolkit (SET).*
 
@@ -16,99 +16,105 @@
 
 ## ❄️ 1. Challenge Overview
 
-**Focus:** Social Engineering & Phishing Attacks
-**Objective:** Learn how attackers use phishing emails to harvest credentials and understand how such attacks are created using the Social-Engineer Toolkit (SET).
+**Focus:** Social Engineering & Phishing  
+**Objective:** Understand how phishing campaigns are built and delivered, and how credential harvesting works in real-world scenarios.
+
+**Status:** Completed (100%)  
+**Estimated Time:** ~30 minutes
 
 ---
 
 ## 🧭 2. Environment Setup
 
-* Platform: TryHackMe AttackBox
-* Access Type: Web-based VM
-* User Context: Attacker simulation (training environment)
-* Privilege Escalation: Not required
+- **Platform:** TryHackMe AttackBox  
+- **Access Type:** Web-based VM  
+- **Scenario:** Attacker simulation (training-only environment)  
+- **Privilege Escalation:** Not required  
 
-**Tools Used:**
-`setoolkit`, `browser`, `email template engine`
+**Tools Used:**  
+`setoolkit`, `browser`, hosted phishing page
 
 ---
 
 ## 🎣 3. Phishing Fundamentals
 
-Phishing is a social engineering technique used to trick users into revealing sensitive information such as:
+Phishing is a form of **social engineering** that targets people rather than systems. It relies on psychological triggers such as:
 
-* Usernames
-* Passwords
-* Email credentials
+- Urgency  
+- Curiosity  
+- Authority  
 
-Attackers often impersonate trusted brands, services, or internal communications to increase success rates.
+The goal is to trick users into revealing sensitive information like:
+- Usernames
+- Passwords
+- Email credentials
 
 ---
 
-## 🧰 4. Using the Social-Engineer Toolkit (SET)
+## 🧰 4. Social-Engineer Toolkit (SET)
 
-SET is a penetration testing framework designed for social engineering attacks.
+SET is an open-source framework designed for social engineering attacks.
 
-**Key capabilities demonstrated:**
+**Capabilities demonstrated in this room:**
+- Crafting phishing email messages
+- Sending emails via a mass mailer
+- Hosting fake login pages
+- Capturing submitted credentials
 
-* Creating phishing email templates
-* Hosting fake login pages
-* Capturing submitted credentials
-
-SET abstracts the technical complexity, making phishing attacks easy to deploy.
+SET lowers the technical barrier, showing how easily phishing attacks can be launched.
 
 ---
 
 ## 📧 5. Phishing Exercise (TBFC Scenario)
 
-In this task, a phishing campaign is simulated against a fictional organization (TBFC).
+A phishing campaign was simulated against a fictional organization (TBFC).
 
-**Steps involved:**
+**Attack Flow:**
+1. Hosted a fake TBFC login portal to harvest credentials  
+2. Used SET Mass Mailer to send a convincing phishing email  
+3. Spoofed a trusted sender related to shipping operations  
+4. Waited for victim interaction  
+5. Captured credentials entered on the fake page  
+6. Tested for **password reuse** on the email portal  
 
-1. Launch SET
-2. Select Social Engineering Attacks
-3. Choose Phishing Attack Vectors
-4. Configure email and credential harvesting
-
-**Outcome:**
-
-* A phishing page is generated
-* Victim interaction results in credential capture
+**Outcome:**  
+- Credentials were successfully harvested, demonstrating how effective phishing can be.
 
 ---
 
 ## 🧠 6. Security Awareness Insight
 
-This exercise highlights:
-
-* How convincing phishing emails can be
-* Why users are the weakest link in security
-* The importance of email filtering and user training
+This exercise reinforces that:
+- Well-crafted phishing emails are hard to detect
+- Humans are often the weakest link in security
+- Password reuse significantly increases impact after compromise
 
 ---
 
 ## 🧾 7. Task Question Answers
 
-| Question                            | Answer                         |
-| ----------------------------------- | ------------------------------ |
-| What toolkit was used for phishing? | Social-Engineer Toolkit (SET)  |
-| What attack type was demonstrated?  | Credential harvesting phishing |
-| What is the main goal of phishing?  | To steal sensitive information |
+| Question                                   | Answer                  |
+| ------------------------------------------ | ----------------------- |
+| Phished TBFC portal password               | `unranked-wisdom-anthem` |
+| Total number of toys expected for delivery | `1,984,000`             |
+| Toolkit used                               | Social-Engineer Toolkit (SET) |
+| Attack type                                | Credential harvesting phishing |
 
 ---
 
 ## 🏁 8. Final Assessment
 
 **Skills Practiced:**
+- Understanding phishing workflows
+- Using SET for social engineering simulations
+- Identifying real-world phishing risks
 
-* Understanding phishing workflows
-* Using SET for social engineering simulations
-* Recognizing real-world phishing risks
-
-**Blue Team Relevance:**
-Defenders must implement user awareness training, email security gateways, and incident response plans to reduce phishing impact.
+**Blue Team Relevance:**  
+Defenders must prioritize:
+- Continuous user awareness training  
+- Strong email filtering and monitoring  
+- Password hygiene and multi-factor authentication  
 
 ---
 
-✅ *Day 02 completed — foundational knowledge for both attackers and defenders in social engineering scenarios.*
-
+✅ *Day 02 completed — a strong foundation in phishing tactics and defensive awareness.*
