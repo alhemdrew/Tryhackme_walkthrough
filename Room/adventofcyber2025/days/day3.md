@@ -116,12 +116,15 @@ Successful outbound C2 communication
 Significant data exfiltration to attacker infrastructure
 
 🧾 8. Task Question Answers
-Question	Answer
-Attacker IP	198.51.100.55
-Peak traffic day	2025-10-12
-Havij user_agent events	993
-Path traversal attempts	658
-Bytes transferred to C2 server	126167
+
+| Question                                                | Answer        |
+| ------------------------------------------------------- | ------------- |
+| What is the attacker IP found attacking the web server? | 198.51.100.55 |
+| Which day was the peak traffic in the logs?             | 2025-10-12    |
+| Count of Havij `user_agent` events in the logs?         | 993           |
+| Number of path traversal attempts to sensitive files?   | 658           |
+| Bytes transferred to the C2 server from the web server? | 126,167       |
+
 
 🏁 9. Final Assessment
 Skills Practiced
