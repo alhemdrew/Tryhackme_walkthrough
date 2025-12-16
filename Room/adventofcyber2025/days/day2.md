@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/6228f0d4ca8e57005149c3e3/room-content/6228f0d4ca8e57005149c3e3-1763378686706.png" width="550">
+  <img src="[https://tryhackme-images.s3.amazonaws.com/user-uploads/6228f0d4ca8e57005149c3e3/room-content/6228f0d4ca8e57005149c3e3-1763378686706.png" width="550">
 </p>
 
 # 🛡️ TryHackMe – Advent of Cyber 2025
@@ -9,7 +9,7 @@
 *Hands-on phishing simulation using the Social-Engineer Toolkit (SET).*
 
 <p align="center">
-  <img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/678ecc92c80aa206339f0f23/room-content/678ecc92c80aa206339f0f23-1762788000826.png" alt="TryHackMe Room Screenshot" width="600">
+  <img src="[https://tryhackme-images.s3.amazonaws.com/user-uploads/678ecc92c80aa206339f0f23/room-content/678ecc92c80aa206339f0f23-1762788000826.png](https://tryhackme-images.s3.amazonaws.com/user-uploads/5f04259cf9bf5b57aed2c476/room-content/5f04259cf9bf5b57aed2c476-1763362766183.jpg)" alt="TryHackMe Room Screenshot" width="600">
 </p>
 
 ---
