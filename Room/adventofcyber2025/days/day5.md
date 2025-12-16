@@ -1,87 +1,30 @@
-<p align="center">
-  <img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/66c44fd9733427ea1181ad58/room-content/66c44fd9733427ea1181ad58-1761575138937.svg" width="550">
-</p>
 
-# 🛡️ TryHackMe – Advent of Cyber 2025
-
-## Day 05 — IDOR: Santa’s Little IDOR
-
-*Exploiting Insecure Direct Object Reference (IDOR) vulnerabilities in a web application.*
-
-<p align="center">
-  <img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/6093e17fa004d20049b6933e/room-content/6093e17fa004d20049b6933e-1759960849816.png" alt="TryHackMe Room Screenshot" width="600">
-</p>
-
----
-
-## ❄️ 1. Challenge Overview
-
-**Focus:** Web Application Security – IDOR
-**Objective:** Identify and exploit an Insecure Direct Object Reference vulnerability on the *TrypresentMe* website to access unauthorized data.
-
----
-
-## 🧭 2. Environment Setup
-
-* Platform: TryHackMe AttackBox
-* Access Type: Web Application
-* Target: TrypresentMe
-* User Context: Authenticated low‑privilege user
-* Privilege Escalation: Not system‑level (logical authorization bypass)
-
-**Tools Used:**
-Web browser, URL manipulation, parameter tampering
-
----
-
-## 🧸 3. Understanding IDOR
-
-IDOR occurs when an application:
-
-* Exposes internal object identifiers (IDs)
-* Fails to properly enforce authorization checks
-
-This allows attackers to access or modify data belonging to other users by simply changing an identifier.
-
----
-
-## 🔍 4. Identifying the Vulnerability
-
-While interacting with the application, numeric identifiers were observed in request parameters.
-
-**Example:**
-
-```
-https://trypresentme.thm/order?id=1001
-```
-
-By modifying the `id` value, data belonging to other users became accessible.
+**Observation:** Changing the `id` allowed access to orders of other users.
 
 ---
 
 ## 🎯 5. Exploiting IDOR
 
-**Technique:**
+**Technique:**  
+- Increment/decrement object IDs  
+- Monitor unauthorized responses  
 
-* Increment and decrement object IDs
-* Observe unauthorized responses
-
-**Result:**
-
-* Access to other users’ orders
-* Disclosure of sensitive information
-
-➡️ **Key Finding:** Authorization checks were missing on object access.
+**Outcome:**  
+- Accessed other users’ accounts and sensitive data  
+- Key Issue: Missing server-side authorization checks
 
 ---
 
 ## 🧾 6. Task Question Answers
 
-| Question                          | Answer                                  |
-| --------------------------------- | --------------------------------------- |
-| What vulnerability was exploited? | Insecure Direct Object Reference (IDOR) |
-| What technique was used?          | Parameter / ID manipulation             |
-| What was bypassed?                | Authorization controls                  |
+| Question                                                       | Answer                                  |
+| -------------------------------------------------------------- | --------------------------------------- |
+| What does IDOR stand for?                                      | Insecure Direct Object Reference        |
+| What type of privilege escalation do most IDOR cases represent?| Horizontal                              |
+| Exploiting the view_accounts IDOR, parent with 10 children has user_id | 15                                      |
+| Vulnerability exploited                                         | Insecure Direct Object Reference (IDOR)|
+| Technique used                                                  | Parameter / ID manipulation             |
+| What was bypassed?                                             | Authorization controls                  |
 
 ---
 
@@ -89,13 +32,13 @@ By modifying the `id` value, data belonging to other users became accessible.
 
 **Skills Practiced:**
 
-* Identifying IDOR vulnerabilities
-* Web request analysis
-* Authorization testing
+- Identifying and exploiting IDOR vulnerabilities  
+- Web request analysis  
+- Testing authorization logic  
 
-**Blue Team Relevance:**
-Applications must enforce server‑side authorization checks and avoid exposing predictable object identifiers to prevent IDOR attacks.
+**Blue Team Relevance:**  
+Enforce server-side authorization checks, avoid exposing predictable object IDs, and monitor failed access attempts to prevent IDOR exploitation.
 
 ---
 
-✅ *Day 05 completed — a critical web vulnerability commonly found in real‑world applications.*
+✅ **Day 05 completed** — practical understanding of a critical web application vulnerability.
