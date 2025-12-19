@@ -128,14 +128,14 @@ Port 80 → CCTV Web Interface
 
 Port 502 → Modbus TCP (PLC access)
 
-🖼️ IMAGE PLACEHOLDER 2
-(Insert screenshot of CCTV feed showing chocolate eggs)
+
 
 👀 Visual Confirmation
 Open in browser:
 
 cpp
-Copy code
+
+
 http://MACHINE_IP
 Observed:
 
@@ -150,6 +150,7 @@ This confirms a logic-level attack.
 🧪 Modbus Reconnaissance (Python)
 Connect to PLC
 python
+
 Copy code
 from pymodbus.client import ModbusTcpClient
 
@@ -164,7 +165,6 @@ Copy code
 1 → Chocolate Eggs
 HR1 – Delivery Zone
 
-css
 Copy code
 5 → Normal zone
 HR4 – System Signature
@@ -218,10 +218,10 @@ Trap avoided
 
 🎯 Flag
 powershell
-Copy code
+
 THM{eGgMas0V3r}
-🖼️ IMAGE PLACEHOLDER 3
-(Insert screenshot showing Christmas restored / victory screen)
+
+
 
 🧠 Post-Incident Analysis
 King Malhare:
@@ -237,6 +237,12 @@ Implemented trap logic
 Left signature value (666)
 
 The maintenance note was critical in preventing total system failure.
+
+
+
+
+
+
 
 ✅ Conclusion
 You successfully:
