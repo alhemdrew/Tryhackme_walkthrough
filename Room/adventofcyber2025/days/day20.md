@@ -3,7 +3,6 @@
 
 ---
 
-## 🖼️ Room Banner
 
 ![Race Conditions – Toy to The World](https://tryhackme-images.s3.amazonaws.com/user-uploads/62a7685ca6e7ce005d3f3afe/room-content/62a7685ca6e7ce005d3f3afe-1763451486547.png)
 
@@ -43,7 +42,12 @@ The cause?
 ⚠️ A **race condition vulnerability** exploited by Sir Carrotbane’s Bandit Bunnies.
 
 ---
+---
 
+
+![Race Conditions – Toy to The World](https://tryhackme-images.s3.amazonaws.com/user-uploads/62a7685ca6e7ce005d3f3afe/room-content/62a7685ca6e7ce005d3f3afe-1763712901620.png)
+
+---
 ## 🧠 Task 2 – Understanding Race Conditions
 
 A **race condition** occurs when:
