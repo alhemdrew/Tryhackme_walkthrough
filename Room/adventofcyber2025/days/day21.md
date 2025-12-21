@@ -219,7 +219,7 @@ This room demonstrates how attackers abuse trusted file formats to gain executio
 ⚠️ Always analyze suspicious files offline and safely.
 
 ✅ Room Completed – 100%
-
+```
 
                                   ## ✅ Advent of Cyber 2025 – Day 21 Answers
 
