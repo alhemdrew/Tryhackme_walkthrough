@@ -5,7 +5,7 @@
 
 ## 🖼️ Room Banner
 
-![Malware Analysis – Malhare.exe](https://tryhackme-images.s3.amazonaws.com/room-icons/aoc2025-day21.png)
+![Malware Analysis – Malhare.exe](https://tryhackme-images.s3.amazonaws.com/user-uploads/6093e17fa004d20049b6933e/room-content/6093e17fa004d20049b6933e-1763892822100.png)
 
 ---
 
