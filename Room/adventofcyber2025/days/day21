@@ -1,0 +1,264 @@
+# 🦠 TryHackMe – Advent of Cyber 2025  
+## Day 21: Malware Analysis – *Malhare.exe*
+
+---
+
+## 🖼️ Room Banner
+
+![Malware Analysis – Malhare.exe](https://tryhackme-images.s3.amazonaws.com/room-icons/aoc2025-day21.png)
+
+---
+
+## 📌 Room Overview
+
+**Room Name:** Malware Analysis – Malhare.exe  
+**Difficulty:** Beginner → Intermediate  
+**Duration:** ~60 minutes  
+**Category:** Malware Analysis / Digital Forensics  
+**File Type Analysed:** HTA (HTML Application)  
+**Status:** ✅ Completed (100%)
+
+This room introduces **static malware analysis** using a malicious **HTA file** disguised as a legitimate survey. The goal is to reverse-engineer the file, understand its behaviour, and uncover how **King Malhare** compromised Wareville’s systems.
+
+---
+
+## 🎯 Learning Objectives
+
+- Understand what **HTA (HTML Application)** files are
+- Learn why HTAs are abused by malware authors
+- Perform **static analysis** on a malicious file
+- Identify **obfuscation techniques** (Base64, ROT13)
+- Detect **data exfiltration mechanisms**
+- Trace execution flow inside VBScript & PowerShell
+
+---
+
+## 📖 Task 1 – Introduction (Story)
+
+Wareville’s systems process thousands of files daily — PDFs, DOCX files, spreadsheets, and executables. Among these, **HTA files** can look harmless but may hide malicious intent.
+
+King Malhare exploited this by sending a **fake salary survey** to TBFC elves. Those who opened the HTA unknowingly executed malware.
+
+Your task is to **analyze the HTA safely** and uncover what it really does.
+
+⚠️ **Important:**  
+Never execute malware locally. Analysis is done using **text editors only** inside the AttackBox.
+
+---
+
+## 🧠 Task 2 – Understanding HTA Files
+
+### 🔹 What is an HTA?
+An **HTA (HTML Application)** is:
+- Built using **HTML, CSS, and JavaScript/VBScript**
+- Executed by **mshta.exe**
+- Runs with **full user privileges**
+- Not sandboxed like a browser
+
+### 🔹 Legitimate Uses
+- Admin automation
+- Setup utilities
+- Internal IT tools
+- Lightweight desktop apps
+
+### 🔹 Why Attackers Love HTAs
+- Easy to disguise as documents or tools
+- Can execute scripts immediately
+- Can call PowerShell, CMD, or Windows utilities
+- Often bypass security controls
+
+---
+
+## 🧱 HTA File Structure
+
+An HTA file contains:
+
+1. **HTA Declaration**
+   - Defines window behaviour and metadata
+2. **HTML Interface**
+   - What the user sees
+3. **Script Section (VBScript / JavaScript)**
+   - The real logic and execution
+
+---
+
+## ⚔️ Malicious HTA Behaviour
+
+Malicious HTAs commonly:
+- Arrive via **phishing emails**
+- Launch via **mshta.exe**
+- Contain **encoded payloads**
+- Download second-stage malware
+- Use **living-off-the-land binaries**
+  - PowerShell
+  - WScript
+  - rundll32
+
+---
+
+## 🛠️ Environment Setup
+
+### Tool Used
+- **AttackBox**
+
+### File Location
+```bash
+/root/Rooms/AoC2025/Day21/survey.hta
+Safe Viewing Command
+bash
+Copy code
+pluma /root/Rooms/AoC2025/Day21/survey.hta
+🔍 Static Analysis Process
+Step 1: Metadata Analysis
+Inspect <head> section
+
+Identify application title and purpose
+
+Step 2: Script Analysis
+Locate <script type="text/vbscript">
+
+Identify functions and execution flow
+
+Step 3: Look for Indicators
+Encoded strings (Base64)
+
+Network calls
+
+PowerShell execution
+
+Data exfiltration
+
+🧠 Identified VBScript Functions
+The HTA contains 5 key functions:
+
+window_onLoad
+
+Automatically runs on execution
+
+Calls getQuestions()
+
+getQuestions
+
+Downloads external data
+
+Decodes Base64
+
+Passes data for execution
+
+provideFeedback
+
+Collects system information
+
+Sends data externally
+
+Executes PowerShell
+
+decodeBase64
+
+Converts Base64 → binary
+
+RSBinaryToString
+
+Converts binary → string
+
+🧪 Objects Used (Indicators of Malicious Activity)
+InternetExplorer.Application → external connections
+
+WScript.Network → system enumeration
+
+WScript.Shell → command execution
+
+📤 Data Exfiltration Details
+Exfiltrated Information
+ComputerName
+
+UserName
+
+Endpoint Used
+```
+/details
+```
+HTTP Method
+```
+GET
+```
+🧨 Code Execution Line
+The downloaded payload is executed using:
+
+vbscript
+```
+runObject.Run "powershell.exe -nop -w hidden -c " & feedbackString, 0, False
+```
+This confirms remote code execution via PowerShell.
+
+🔐 Obfuscation Techniques Used
+```
+Base64 – hides payload
+```
+ROT13 – second-layer obfuscation
+```
+Both were decoded using CyberChef.
+
+🏁 Flag
+```
+THM{Malware.Analysed}
+🛡️ Key Takeaways
+HTA files can be extremely dangerous
+
+Static analysis prevents accidental execution
+
+Encoding ≠ encryption — always decode
+
+Social engineering is embedded even in code
+
+Malware often hides behind legitimate-looking content
+
+🎉 Conclusion
+This room demonstrates how attackers abuse trusted file formats to gain execution on systems. Understanding HTA internals, script behaviour, and obfuscation techniques is essential for malware analysts and SOC teams.
+
+⚠️ Always analyze suspicious files offline and safely.
+
+✅ Room Completed – 100%
+
+
+                                  ## ✅ Advent of Cyber 2025 – Day 21 Answers
+
+1. **What is the title of the HTA application?**  
+   **Answer:** Best Festival Company Developer Survey
+
+2. **What VBScript function is acting as if it is downloading the survey questions?**  
+   **Answer:** getQuestions
+
+3. **What URL domain (including sub-domain) is the "questions" being downloaded from?**  
+   **Answer:** survey.bestfestiivalcompany.com
+
+4. **Malhare seems to be using typosquatting. What character in the domain gives this away?**  
+   **Answer:** i
+
+5. **How many questions does the survey have?**  
+   **Answer:** 4
+
+6. **The survey entices participation by promising a chance to win a trip to where?**  
+   **Answer:** South Pole
+
+7. **What two pieces of information about the computer are being exfiltrated?**  
+   **Answer:** ComputerName,UserName
+
+8. **What endpoint is the enumerated data being exfiltrated to?**  
+   **Answer:** /details
+
+9. **What HTTP method is being used to exfiltrate the data?**  
+   **Answer:** GET
+
+10. **What line of code executes the contents of the downloaded data?**  
+    **Answer:**  
+    runObject.Run "powershell.exe -nop -w hidden -c " & feedbackString, 0, False
+
+11. **What popular encoding scheme was used to obfuscate the download?**  
+    **Answer:** base64
+
+12. **What common encryption scheme was used in the script after decoding?**  
+    **Answer:** rot13
+
+13. **What is the final flag value?**  
+    **Answer:** THM{Malware.Analysed}
