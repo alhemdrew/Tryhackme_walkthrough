@@ -202,6 +202,8 @@ Both were decoded using CyberChef.
 🏁 Flag
 ```
 THM{Malware.Analysed}
+```
+
 🛡️ Key Takeaways
 HTA files can be extremely dangerous
 
