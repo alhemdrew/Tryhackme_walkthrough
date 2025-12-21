@@ -219,46 +219,72 @@ This room demonstrates how attackers abuse trusted file formats to gain executio
 ⚠️ Always analyze suspicious files offline and safely.
 
 ✅ Room Completed – 100%
-```
 
                                   ## ✅ Advent of Cyber 2025 – Day 21 Answers
 
 1. **What is the title of the HTA application?**  
-   **Answer:** Best Festival Company Developer Survey
+ ```
+  **Answer:**  Best Festival Company Developer Survey```
+
 
 2. **What VBScript function is acting as if it is downloading the survey questions?**  
-   **Answer:** getQuestions
+ ```
+  **Answer:** getQuestions
+```
+
 
 3. **What URL domain (including sub-domain) is the "questions" being downloaded from?**  
-   **Answer:** survey.bestfestiivalcompany.com
+ ```
+  **Answer:** survey.bestfestiivalcompany.com
+```
 
 4. **Malhare seems to be using typosquatting. What character in the domain gives this away?**  
-   **Answer:** i
+ ```
+  **Answer:** i
+```
 
 5. **How many questions does the survey have?**  
-   **Answer:** 4
+ ```
+  **Answer:** 4
+```
 
 6. **The survey entices participation by promising a chance to win a trip to where?**  
+```
    **Answer:** South Pole
+```
 
 7. **What two pieces of information about the computer are being exfiltrated?**  
-   **Answer:** ComputerName,UserName
+ ```
+  **Answer:** ComputerName,UserName
+```
 
 8. **What endpoint is the enumerated data being exfiltrated to?**  
-   **Answer:** /details
+ ```
+  **Answer:** /details
+```
 
 9. **What HTTP method is being used to exfiltrate the data?**  
-   **Answer:** GET
+ ```
+  **Answer:** GET
+```
 
 10. **What line of code executes the contents of the downloaded data?**  
-    **Answer:**  
+ ```
+   **Answer:**  
     runObject.Run "powershell.exe -nop -w hidden -c " & feedbackString, 0, False
+```
 
 11. **What popular encoding scheme was used to obfuscate the download?**  
+```
     **Answer:** base64
+```
 
 12. **What common encryption scheme was used in the script after decoding?**  
-    **Answer:** rot13
+  ```
+  **Answer:** rot13
+```
 
 13. **What is the final flag value?**  
-    **Answer:** THM{Malware.Analysed}
+  ```
+  **Answer:** THM{Malware.Analysed}
+```
