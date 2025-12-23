@@ -103,7 +103,12 @@ Each keycard gives access to the corresponding VM, where you can solve challenge
 
 **Note:** Users must complete a short survey to get the final flag.
 
-**Survey Flag:** `THM{bigger_and_maybe_not_as_mean_in_2025}`
+**Survey Flag:** `<div style="font-family: monospace; font-size: 24px; font-weight: bold; 
+            background: #333; color: #0f0; padding: 20px; width: fit-content;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 100%);">
+  THM{bigger_and_maybe_not_as_mean_in_2025}
+</div>
+`
 
 ---
 
