@@ -39,7 +39,10 @@ VERIFY CREDENTIALS:
 aws sts get-caller-identity
 
 Answer:
-Account ID = 123456789012
+Account ID = 
+```
+123456789012
+```
 
 --------------------------------------------------
 
@@ -68,7 +71,9 @@ QUESTION:
 What IAM component defines permissions?
 
 Answer:
+```
 policy
+```
 
 --------------------------------------------------
 
@@ -90,8 +95,9 @@ Get policy details:
 aws iam get-user-policy --policy-name POLICYNAME --user-name sir.carrotbane
 
 Answer:
+```
 SirCarrotbanePolicy
-
+```
 --------------------------------------------------
 
 
@@ -125,8 +131,9 @@ Verify:
 aws sts get-caller-identity
 
 Answer:
+```
 ListAllMyBuckets
-
+```
 --------------------------------------------------
 
 TASK 5 – GRABBING A FILE FROM S3
@@ -144,8 +151,9 @@ aws s3api get-object \
 cloud_password.txt
 
 File content:
+```
 THM{more_like_sir_cloudbane}
-
+```
 --------------------------------------------------
 
 FINAL ANSWERS
