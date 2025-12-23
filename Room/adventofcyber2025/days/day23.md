@@ -164,8 +164,9 @@ Extra role permission:
 ListAllMyBuckets
 
 S3 secret:
+```
 THM{more_like_sir_cloudbane}
-
+```
 --------------------------------------------------
 
 KEY TAKEAWAYS
