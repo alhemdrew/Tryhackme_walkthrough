@@ -1,4 +1,7 @@
 # Advent of Cyber 2025 – Day 24  
+<p align="center">
+  <img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/63588b5ef586912c7d03c4f0/room-content/63588b5ef586912c7d03c4f0-1764153637405.png" alt="Day 24 Banner / Quantum Fortress" width="650">
+</p>
 **Room:** Exploitation with cURL – Hoperation Eggsploit  
 **Platform:** TryHackMe  
 **Time:** ~30 min  
