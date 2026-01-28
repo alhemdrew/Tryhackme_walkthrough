@@ -1,15 +1,22 @@
 # NahamStore – Penetration Testing Report
 
-<div style="text-align: center;">
-<img src="eb2479259872aa3d4fc761156cfe5bfd.png" alt="NahamStore Banner">
-</div>
-> **Author:** Alhemdrew Davenchi
-> **Repository:** alhemdrew/Tryhackme_walkthrough/edit/main/Room/NahamStore/
-> **Difficulty:** Intermediate  
-> **Category:** Web Application Security  
-> **Vulnerabilities:** SQLi, XSS, RCE, LFI, SSRF, IDOR, XXE, CSRF  
+<p align="center">
+  <img src="eb2479259872aa3d4fc761156cfe5bfd.png" alt="NahamStore Banner" width="800">
+</p>
+
+<p align="center">
+  <strong>Author:</strong> Alhemdrew Davenchi | 
+  <strong>Difficulty:</strong> Intermediate | 
+  <strong>Category:</strong> Web Application Security
+</p>
+
+<p align="center">
+  <strong>Vulnerabilities:</strong> <br>
+  <code>SQLi</code> • <code>XSS</code> • <code>RCE</code> • <code>LFI</code> • <code>SSRF</code> • <code>IDOR</code> • <code>XXE</code> • <code>CSRF</code>
+</p>
 
 ---
+
 
 ## 📌 Overview
 
