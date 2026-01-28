@@ -1,6 +1,6 @@
-# 🛒 NahamStore – Penetration Testing Report
+# NahamStore – Penetration Testing Report
 
-![NahamStore Banner](https://tryhackme-images.s3.amazonaws.com/room-icons/eb2479259872aa3d4fc761156cfe5bfd.png)
+![NahamStore Banner](eb2479259872aa3d4fc761156cfe5bfd.png)
 
 > **Author:** AbdElRhman Mohamed Salah Khalil  
 > **Repository:** abdelrhmanmohamed93/NahamStore-Report  
